@@ -61,7 +61,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Hold",
+                    "name": "Block",
                     "type": "Button",
                     "id": "7fc79f39-ab44-4102-99a8-219ba9629beb",
                     "expectedControlType": "",
@@ -351,7 +351,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hold",
+                    "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -362,7 +362,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hold",
+                    "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -373,7 +373,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hold",
+                    "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

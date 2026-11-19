@@ -147,7 +147,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Hold"",
+                    ""name"": ""Block"",
                     ""type"": ""Button"",
                     ""id"": ""7fc79f39-ab44-4102-99a8-219ba9629beb"",
                     ""expectedControlType"": """",
@@ -437,7 +437,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Hold"",
+                    ""action"": ""Block"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -448,7 +448,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Hold"",
+                    ""action"": ""Block"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -459,7 +459,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Hold"",
+                    ""action"": ""Block"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -575,7 +575,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_FightArena_Right_Punch = m_FightArena.FindAction("Right_Punch", throwIfNotFound: true);
         m_FightArena_Left_Kick = m_FightArena.FindAction("Left_Kick", throwIfNotFound: true);
         m_FightArena_Right_Kick = m_FightArena.FindAction("Right_Kick", throwIfNotFound: true);
-        m_FightArena_Hold = m_FightArena.FindAction("Hold", throwIfNotFound: true);
+        m_FightArena_Block = m_FightArena.FindAction("Block", throwIfNotFound: true);
         m_FightArena_Retreat = m_FightArena.FindAction("Retreat", throwIfNotFound: true);
     }
 
@@ -663,7 +663,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_FightArena_Right_Punch;
     private readonly InputAction m_FightArena_Left_Kick;
     private readonly InputAction m_FightArena_Right_Kick;
-    private readonly InputAction m_FightArena_Hold;
+    private readonly InputAction m_FightArena_Block;
     private readonly InputAction m_FightArena_Retreat;
     /// <summary>
     /// Provides access to input actions defined in input action map "Fight Arena".
@@ -701,9 +701,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Right_Kick => m_Wrapper.m_FightArena_Right_Kick;
         /// <summary>
-        /// Provides access to the underlying input action "FightArena/Hold".
+        /// Provides access to the underlying input action "FightArena/Block".
         /// </summary>
-        public InputAction @Hold => m_Wrapper.m_FightArena_Hold;
+        public InputAction @Block => m_Wrapper.m_FightArena_Block;
         /// <summary>
         /// Provides access to the underlying input action "FightArena/Retreat".
         /// </summary>
@@ -752,9 +752,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Right_Kick.started += instance.OnRight_Kick;
             @Right_Kick.performed += instance.OnRight_Kick;
             @Right_Kick.canceled += instance.OnRight_Kick;
-            @Hold.started += instance.OnHold;
-            @Hold.performed += instance.OnHold;
-            @Hold.canceled += instance.OnHold;
+            @Block.started += instance.OnBlock;
+            @Block.performed += instance.OnBlock;
+            @Block.canceled += instance.OnBlock;
             @Retreat.started += instance.OnRetreat;
             @Retreat.performed += instance.OnRetreat;
             @Retreat.canceled += instance.OnRetreat;
@@ -787,9 +787,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Right_Kick.started -= instance.OnRight_Kick;
             @Right_Kick.performed -= instance.OnRight_Kick;
             @Right_Kick.canceled -= instance.OnRight_Kick;
-            @Hold.started -= instance.OnHold;
-            @Hold.performed -= instance.OnHold;
-            @Hold.canceled -= instance.OnHold;
+            @Block.started -= instance.OnBlock;
+            @Block.performed -= instance.OnBlock;
+            @Block.canceled -= instance.OnBlock;
             @Retreat.started -= instance.OnRetreat;
             @Retreat.performed -= instance.OnRetreat;
             @Retreat.canceled -= instance.OnRetreat;
@@ -876,12 +876,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRight_Kick(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Hold" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Block" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnHold(InputAction.CallbackContext context);
+        void OnBlock(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Retreat" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
